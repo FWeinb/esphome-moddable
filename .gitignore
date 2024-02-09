@@ -1,4 +1,5 @@
 dist/
 node_modules/
+src/lib/gen/
 package-lock.json
 package-manifest.json
