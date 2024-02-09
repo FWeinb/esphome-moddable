@@ -1,0 +1,34 @@
+{
+  "name": "@fweinb/moddable-esphome",
+  "version": "1.0.0",
+  "moddable": {
+    "manifest": {
+      "include": [
+        "$(MODDABLE)/examples/manifest_base.json",
+        "$(MODDABLE)/examples/manifest_net.json",
+        "$(MODDABLE)/modules/network/mdns/manifest.json"
+      ]
+    }
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.7.2",
+    "@moddable/eventemitter3": "^1.0.1"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.29.0",
+    "@bufbuild/protoc-gen-es": "^1.7.2",
+    "@moddable/typings": "^1.0.0",
+    "typescript": "^5.3.3",
+    "xs-dev": "^0.30.3"
+  },
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "prebuild": "buf generate proto",
+    "build": "tsc",
+    "sim": "npm run build && xs-dev run --log"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}

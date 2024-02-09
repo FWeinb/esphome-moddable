@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "outDir": "dist",
+    "lib": ["es2022"],
+    "module": "es2022",
+    "target": "ES2022",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [ 
+        "./node_modules/@moddable/typings/*"
+      ],
+      "embedded:io/*": ["./node_modules/@moddable/typings/embedded_io/*"],
+      "@bufbuild/protobuf": ["./node_modules/@bufbuild/protobuf/dist/esm/index.js"],
+    },
+    "types": [
+      "./node_modules/@moddable/typings/mdns",
+      "./node_modules/@moddable/typings/socket",
+      "./node_modules/@moddable/typings/xs"
+    ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
